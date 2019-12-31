@@ -27,6 +27,14 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+/*
+ * 
+ * @author Shashin Gupta
+ * @author Kushagr Khanna
+ * @version 4.0
+ *
+ */
+
 package FtcRobotController.src.main.java.org.firstinspires.ftc.robotcontroller.external.samples;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
@@ -58,7 +66,10 @@ public class BasicOpMode_Linear /*extends LinearOpMode*/ {
     private ElapsedTime runtime = new ElapsedTime();
     private DcMotor leftDrive = null;
     private DcMotor rightDrive = null;
-
+    
+    public Gamepad gamepad1 = null;
+    public Gamepad gamepad2 = null;
+    
     @Override
     public void runOpMode() {
         telemetry.addData("Status", "Initialized");
