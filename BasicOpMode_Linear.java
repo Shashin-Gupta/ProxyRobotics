@@ -2,7 +2,7 @@
  * 
  * @author Shashin Gupta
  * @author Kushagr Khanna
- * @version 4.1
+ * @version 4.20
  *
  */
 
@@ -31,7 +31,7 @@ import com.qualcomm.robotcore.util.Range;
 
 @TeleOp(name="Basic: Linear OpMode", group="Linear Opmode")
 // @Disabled
-public class BasicOpMode_Linear /*extends LinearOpMode*/ {
+public class BasicOpMode_Linear extends LinearOpMode {
 
     private ElapsedTime runtime = new ElapsedTime();
     private DcMotor leftDrive = null;
