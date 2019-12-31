@@ -9,7 +9,7 @@ import com.qualcomm.robotcore.hardware.HardwareMap;
  * @author Shashin Gupta
  * @author Kushagr Khanna
  * @since 9/27/2019
- * @version 3.7
+ * @version 4.0
  *
  **/
 
@@ -20,11 +20,11 @@ public class GamePadDriveTeleOp extends BasicOpMode_Linear {
 
 	@Override
 	public void init() {
-		leftWheel = HardwareMap.dcMotor.get("left_wheel");
-		rightWheel = HardwareMap.dcMotor.get("right_wheel");
+		leftWheel = hardwareMap.dcMotor.get("left_wheel");
+		rightWheel = hardwareMap.dcMotor.get("right_wheel");
 		
-		leftWheel2 = HardwareMap.dcMotor.get("left_wheel");
-		rightWheel2 = HardwareMap.dcMotor.get("right_wheel");
+		leftWheel2 = hardwareMap.dcMotor.get("left_wheel");
+		rightWheel2 = hardwareMap.dcMotor.get("right_wheel");
 
 		leftWheel.setDirection(DcMotor.Direction.REVERSE);
 		rightWheel2.setDirection(DcMotor.Direction.REVERSE);
