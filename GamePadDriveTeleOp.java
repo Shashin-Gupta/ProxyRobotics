@@ -1,28 +1,29 @@
 package com.qualcomm.robotcontroller.opmodes;
 
 import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.HardwareMap;
 
 /**
  *
  * @author Shashin Gupta
  * @author Kushagr Khanna
  * @since 9/27/2019
- * @version 3.5
+ * @version 3.6
  *
  **/
 
 public class GamePadDriveTeleOp extends BasicOpMode_Linear {
 
-	DcMotor leftWheel, rightWheel, leftWheel2, rightWheel2;
-	double jointWheelPower;
+	private static DcMotor leftWheel, rightWheel, leftWheel2, rightWheel2;
+	private static double jointWheelPower;
 
 	@Override
 	public void init() {
-		leftWheel = hardwareMap.dcMotor.get("left_wheel");
-		rightWheel = hardwareMap.dcMotor.get("right_wheel");
+		leftWheel = HardwareMap.dcMotor.get("left_wheel");
+		rightWheel = HardwareMap.dcMotor.get("right_wheel");
 		
-		leftWheel2 = hardwareMap.dcMotor.get("left_wheel");
-		rightWheel2 = hardwareMap.dcMotor.get("right_wheel");
+		leftWheel2 = HardwareMap.dcMotor.get("left_wheel");
+		rightWheel2 = HardwareMap.dcMotor.get("right_wheel");
 
 		leftWheel.setDirection(DcMotor.Direction.REVERSE);
 		rightWheel2.setDirection(DcMotor.Direction.REVERSE);
