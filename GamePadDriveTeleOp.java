@@ -44,10 +44,5 @@ public class GamePadDriveTeleOp extends OpMode {
 		leftWheel2.setPower(right);
 		rightWheel2.setPower(left);
 	}
-
     }
-
-
-
-
 }
