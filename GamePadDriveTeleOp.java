@@ -1,24 +1,28 @@
 package org.firstinspires.ftc.teamcode;
 
-import org.firstinspires.ftc.teamcode.BasicOpMode_Linear;
+// import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
-import com.qualcomm.robotcore.hardware.HardwareMap;
+import com.qualcomm.robotcore.util.ElapsedTime;
+import com.qualcomm.robotcore.util.Range;
 
 /**
  *
  * @author Shashin Gupta
  * @author Kushagr Khanna
  * @since 9/27/2019
- * @version 4.0
+ * @version 4.1
  *
  **/
 
-public class GamePadDriveTeleOp extends BasicOpMode_Linear {
+public class GamePadDriveTeleOp extends OpMode {
 
 	private static DcMotor leftWheel, rightWheel, leftWheel2, rightWheel2;
 	private static double left, right;
-
-	@Override
+    
+   	public Gamepad gamepad1 = null;
+   	public Gamepad gamepad2 = null;
+    	public HardwareMap hardwareMap = null;	
+	
 	public void init() {
 		leftWheel = hardwareMap.dcMotor.get("left_wheel");
 		rightWheel = hardwareMap.dcMotor.get("right_wheel");
@@ -31,7 +35,6 @@ public class GamePadDriveTeleOp extends BasicOpMode_Linear {
 
 	}
 
-	@Override
 	public void loop() {
 		right = gamepad1.right_stick_y;
 		left = -gamepad1.left_stick_y;
@@ -41,4 +44,10 @@ public class GamePadDriveTeleOp extends BasicOpMode_Linear {
 		leftWheel2.setPower(right);
 		rightWheel2.setPower(left);
 	}
+
+    }
+
+
+
+
 }
